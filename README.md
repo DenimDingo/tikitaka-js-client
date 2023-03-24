@@ -1,3 +1,3 @@
-# TIKI_TAKA
+# TIKI TAKA
 
 This is messenger desktop application
