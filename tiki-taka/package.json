@@ -2,6 +2,7 @@
   "name": "tiki-taka",
   "version": "0.1.0",
   "private": true,
+  "main": "src/main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -15,16 +16,12 @@
     "wait-on": "^7.0.1",
     "web-vitals": "^2.1.0"
   },
-  "main": "public/main.js",
-  "homepage": "./",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"cross-env BROWSER=none yarn react-scripts start\" \"yarn electron\" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron:serve": "concurrently -k \"cross-env BROWSER=none yarn start\" \"yarn electron:start\"",
-    "electron:build": "yarn build && electron-builder -c.extraMetadata.main=build/main.js",
-    "electron:start": "wait-on tcp:3000 && electron ."
+    "electron": "wait-on http://127.0.0.1:3000 && electron ."
   },
   "eslintConfig": {
     "extends": [
