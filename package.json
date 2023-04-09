@@ -1,8 +1,0 @@
-{
-  "name": "tiki-taka",
-  "version": "0.0.0",
-  "main": "index.js",
-  "repository": "https://github.com/DenimDingo/tikitaka-js-client.git",
-  "author": "Esilonely <yoongyum@kakao.com>",
-  "license": "MIT"
-}
