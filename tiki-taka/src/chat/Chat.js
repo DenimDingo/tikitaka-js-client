@@ -57,9 +57,11 @@ function Chat() {
 
         if(msg !== ''){
             const data = {
-                name,
+                type : 'new',
+                name : name,
                 msg,
                 date: new Date().toLocaleString(),
+                receiver: 'all'
             };  //전송 데이터(JSON)
 
             const temp = JSON.stringify(data);
