@@ -1,26 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
-import Chat from './chat/Chat';
+import { HashRouter, Route, Routes } from 'react-router-dom';
+import Navigation from './Navigation';
+import Home from './Home';
+import Chat from './chat/Chat'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Welcome!!
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Main Page!!!!
-        </a>
-      </header>
-      <Chat />
-    </div>
+    <HashRouter>
+      <Navigation/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/chat" element={<Chat />} />
+      </Routes>
+    </HashRouter>
   );
 }
 
