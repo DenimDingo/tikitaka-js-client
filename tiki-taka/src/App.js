@@ -1,8 +1,8 @@
 import './App.css';
 import { HashRouter, Route, Routes } from 'react-router-dom';
-import Navigation from './Navigation';
-import Home from './Home';
-import Chat from './chat/Chat'
+import Navigation from './page/Navigation';
+import Home from './page/Home/Home';
+import Chat from './page/chat/Chat'
 
 function App() {
   return (
