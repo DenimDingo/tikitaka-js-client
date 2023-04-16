@@ -1,6 +1,7 @@
 import React, { useCallback, useRef, useState, useEffect } from 'react';
 import {createGlobalStyle} from 'styled-components';
-import reset from 'styled-reset'
+import reset from 'styled-reset';
+import './Chat.scss'
 
 function Chat() {
     const [msg, setMsg] = useState("");
