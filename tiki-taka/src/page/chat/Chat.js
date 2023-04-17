@@ -85,7 +85,6 @@ function Chat() {
 
     return (
         <>
-            <GlobalStyle/>
             <div id="chat-wrap">
                 <div id='chatt'>
                     <h1 id="title">Tiki Taka</h1>

@@ -1,13 +1,20 @@
 import React from "react"; 
 import { Link } from "react-router-dom"
+import "./Navigation.scss"
 
 function Navigation () {
 
     return (
-        <div >
-            <Link to="/login">LOGIN</Link>
-            <Link to="/">HOME</Link>
-            <Link to="/chat">CHAT</Link>
+        <div id="gnb">
+            <Link to="/login">
+                <div id="gnb-block">LOGIN</div>
+            </Link>
+            <Link to="/">
+                <div id="gnb-block">HOME</div>
+            </Link>
+            <Link to="/chat">
+                <div id="gnb-block">CHAT</div>
+            </Link>
         </div>
     )
 }
