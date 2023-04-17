@@ -25,7 +25,7 @@ function Chat() {
             console.log(tempData);
             setChatt(tempData);
         }
-    }, [socketData]);
+    }, [socketData, chatt]);
 
     const GlobalStyle = createGlobalStyle`  //css 초기화가 된 component
         ${reset}
@@ -43,7 +43,7 @@ function Chat() {
             const dataSet = JSON.parse(message.data);
             setSocketData(dataSet);
         }
-    });
+    }, []);
 
     const send = useCallback(() => {
         if(!chkLog) {
@@ -81,7 +81,7 @@ function Chat() {
             return;
         }
         setMsg("");
-    });
+    }, []);
 
     return (
         <>
